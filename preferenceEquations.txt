@@ -1,0 +1,2 @@
+﻿"bottomThickness"= .220in
+"wallThickness"= .125in
