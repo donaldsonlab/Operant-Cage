@@ -12,7 +12,7 @@ int leverPressFoodPin    = pins[3];
 int leverPressPartnerPin = pins[4];
 int leverPressNovelPin   = pins[5];
 int enterPartnerPin      = pins[6];
-int enterNovelPin        = pins[7];
+int enterNovelPin        = pins[7];g
 
 String sdata = ""; // Initialize
 byte pinCount = sizeof(pins)
