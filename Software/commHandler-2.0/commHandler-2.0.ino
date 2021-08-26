@@ -2,8 +2,9 @@
 
 // includes
 #include <CSV_Parser.h>
+#include <SoftwareSerial.h>
 
-byte pins[] = {13,2,3,4,5,6,7,12,11};
+byte pins[] = {13,10,9,4,5,6,7,11};
 
 int leverOutFoodPin      = pins[0];
 int leverOutPartnerPin   = pins[1];
@@ -18,6 +19,11 @@ int nullPin              = pins[8];
 String sdata = ""; // Initialize
 byte pinCount = sizeof(pins);
 
+// Software serial pins (rx, Tx)
+int softRX = 2;
+int softTX = 3;
+SoftwareSerial myserial(softRX,softTX);
+
 void setup () {
     // Set the right pins for the right commands
     for (byte i = 0; i < pinCount; i++) {
@@ -28,6 +34,10 @@ void setup () {
     Serial.begin(9600);
     Serial.println("Starting Serial Dialogue");
 
+    // Setup the software serial port
+    myserial.begin(9600);
+    
+    
     // Test the csv parsing
     //CSV_Parser cp('commands.csv', /*format*/, "ss", /*has_header*/, false);
     //cp.print();
@@ -36,8 +46,8 @@ void setup () {
 void loop () {
     // Read the serial for the command
     byte ch;
-    if (Serial.available()) {
-        ch = Serial.read();
+    if (myserial.available()) {
+        ch = myserial.read();
         sdata += (char)ch;
 
         if (ch == '\r') { // End of the command, full line has been recieved and is ready to go
@@ -94,12 +104,4 @@ void commands (String command) {
     for (byte i = 0; i < pinCount; i++) {
         digitalWrite(pins[i], LOW);
     }
-}
-
-void fast_blink(int pin) {
-  digitalWrite(pin, HIGH);
-  delay(250);
-  digitalWrite(pin, LOW);
-  delay(250);
-  digitalWrite(pin, HIGH);
 }
