@@ -66,7 +66,7 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="no" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
@@ -9951,10 +9951,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY7" library="supply2" deviceset="+5V" device=""/>
 <part name="5-PIN-HEAD" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="" package3d_urn="urn:adsk.eagle:package:22469/2"/>
 <part name="DOOR1" library="SparkFun-Electromechanical" deviceset="SERVO" device=""/>
-<part name="LVR_DOOR1" library="SparkFun-Electromechanical" deviceset="SERVO" device=""/>
 <part name="DISPENSER" library="SparkFun-Electromechanical" deviceset="SERVO" device=""/>
 <part name="DOOR2" library="SparkFun-Electromechanical" deviceset="SERVO" device=""/>
-<part name="LVR_DOOR2" library="SparkFun-Electromechanical" deviceset="SERVO" device=""/>
 <part name="LVR_DISPENSER" library="SparkFun-Electromechanical" deviceset="SERVO" device=""/>
 </parts>
 <sheets>
@@ -10354,25 +10352,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="NAME" x="584.454" y="24.384" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="584.454" y="16.256" size="1.778" layer="95" font="vector" align="top-left"/>
 </instance>
-<instance part="LVR_DOOR1" gate="G$1" x="594.36" y="0" smashed="yes">
+<instance part="DISPENSER" gate="G$1" x="594.36" y="0" smashed="yes">
 <attribute name="NAME" x="584.454" y="1.524" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="584.454" y="-6.604" size="1.778" layer="95" font="vector" align="top-left"/>
 </instance>
-<instance part="DISPENSER" gate="G$1" x="594.36" y="-20.32" smashed="yes">
-<attribute name="NAME" x="584.454" y="-18.796" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="584.454" y="-26.924" size="1.778" layer="95" font="vector" align="top-left"/>
+<instance part="DOOR2" gate="G$1" x="594.36" y="-25.4" smashed="yes">
+<attribute name="NAME" x="584.454" y="-23.876" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="584.454" y="-32.004" size="1.778" layer="95" font="vector" align="top-left"/>
 </instance>
-<instance part="DOOR2" gate="G$1" x="594.36" y="-40.64" smashed="yes">
-<attribute name="NAME" x="584.454" y="-39.116" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="584.454" y="-47.244" size="1.778" layer="95" font="vector" align="top-left"/>
-</instance>
-<instance part="LVR_DOOR2" gate="G$1" x="594.36" y="-60.96" smashed="yes">
-<attribute name="NAME" x="584.454" y="-59.436" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="584.454" y="-67.564" size="1.778" layer="95" font="vector" align="top-left"/>
-</instance>
-<instance part="LVR_DISPENSER" gate="G$1" x="594.36" y="-81.28" smashed="yes">
-<attribute name="NAME" x="584.454" y="-79.756" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="584.454" y="-87.884" size="1.778" layer="95" font="vector" align="top-left"/>
+<instance part="LVR_DISPENSER" gate="G$1" x="594.36" y="-53.34" smashed="yes">
+<attribute name="NAME" x="584.454" y="-51.816" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="584.454" y="-59.944" size="1.778" layer="95" font="vector" align="top-left"/>
 </instance>
 </instances>
 <busses>
@@ -10598,24 +10588,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="3.3V" class="0">
 <segment>
-<pinref part="RPI1" gate="G$1" pin="3.3V@1"/>
 <pinref part="RPI1" gate="G$1" pin="3.3V"/>
-<wire x1="220.98" y1="109.22" x2="223.52" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="129.54" x2="220.98" y2="129.54" width="0.1524" layer="91"/>
 <label x="210.82" y="129.54" size="1.778" layer="95"/>
+<pinref part="RPI1" gate="G$1" pin="3.3V@1"/>
 <wire x1="220.98" y1="129.54" x2="210.82" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="109.22" x2="220.98" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="109.22" x2="220.98" y2="129.54" width="0.1524" layer="91"/>
 <junction x="220.98" y="129.54"/>
-<pinref part="U1" gate="G$1" pin="VCC"/>
-<wire x1="363.22" y1="116.84" x2="363.22" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="363.22" y1="137.16" x2="337.82" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="337.82" y1="137.16" x2="332.74" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="332.74" y1="137.16" x2="332.74" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="337.82" y1="129.54" x2="337.82" y2="137.16" width="0.1524" layer="91"/>
-<junction x="337.82" y="137.16"/>
-<label x="345.44" y="137.16" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -10910,26 +10890,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="LVR_DISPENSER" gate="G$1" pin="GND"/>
-<wire x1="596.9" y1="-86.36" x2="607.06" y2="-86.36" width="0.1524" layer="91"/>
-<label x="604.52" y="-86.36" size="1.778" layer="95" font="fixed"/>
-</segment>
-<segment>
-<pinref part="LVR_DOOR2" gate="G$1" pin="GND"/>
-<wire x1="596.9" y1="-66.04" x2="607.06" y2="-66.04" width="0.1524" layer="91"/>
-<label x="604.52" y="-66.04" size="1.778" layer="95" font="fixed"/>
+<wire x1="596.9" y1="-58.42" x2="607.06" y2="-58.42" width="0.1524" layer="91"/>
+<label x="604.52" y="-58.42" size="1.778" layer="95" font="fixed"/>
 </segment>
 <segment>
 <pinref part="DOOR2" gate="G$1" pin="GND"/>
-<wire x1="596.9" y1="-45.72" x2="607.06" y2="-45.72" width="0.1524" layer="91"/>
-<label x="604.52" y="-45.72" size="1.778" layer="95" font="fixed"/>
+<wire x1="596.9" y1="-30.48" x2="607.06" y2="-30.48" width="0.1524" layer="91"/>
+<label x="604.52" y="-30.48" size="1.778" layer="95" font="fixed"/>
 </segment>
 <segment>
 <pinref part="DISPENSER" gate="G$1" pin="GND"/>
-<wire x1="596.9" y1="-25.4" x2="607.06" y2="-25.4" width="0.1524" layer="91"/>
-<label x="604.52" y="-25.4" size="1.778" layer="95" font="fixed"/>
-</segment>
-<segment>
-<pinref part="LVR_DOOR1" gate="G$1" pin="GND"/>
 <wire x1="596.9" y1="-5.08" x2="607.06" y2="-5.08" width="0.1524" layer="91"/>
 <label x="604.52" y="-5.08" size="1.778" layer="95" font="fixed"/>
 </segment>
@@ -11181,8 +11151,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="DISPENSER" gate="G$1" pin="SIG"/>
-<wire x1="596.9" y1="-20.32" x2="607.06" y2="-20.32" width="0.1524" layer="91"/>
-<label x="604.52" y="-20.32" size="1.778" layer="95" font="fixed"/>
+<wire x1="596.9" y1="0" x2="607.06" y2="0" width="0.1524" layer="91"/>
+<label x="604.52" y="0" size="1.778" layer="95" font="fixed"/>
 </segment>
 </net>
 <net name="PWM2" class="0">
@@ -11195,11 +11165,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="345.44" y1="-45.72" x2="337.82" y2="-45.72" width="0.1524" layer="91"/>
 <label x="337.82" y="-45.72" size="1.778" layer="95"/>
 <pinref part="R13" gate="G$2" pin="1"/>
-</segment>
-<segment>
-<pinref part="LVR_DOOR1" gate="G$1" pin="SIG"/>
-<wire x1="596.9" y1="0" x2="607.06" y2="0" width="0.1524" layer="91"/>
-<label x="604.52" y="0" size="1.778" layer="95" font="fixed"/>
 </segment>
 </net>
 <net name="PWM3" class="0">
@@ -11241,11 +11206,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="PWM6" class="0">
 <segment>
 <wire x1="320.04" y1="-17.78" x2="330.2" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="337.82" y1="10.16" x2="345.44" y2="10.16" width="0.1524" layer="91"/>
 <label x="322.58" y="-17.78" size="1.778" layer="95"/>
-<label x="337.82" y="10.16" size="1.778" layer="95"/>
 <pinref part="U2" gate="G$1" pin="PWM6"/>
+</segment>
+<segment>
 <pinref part="R11" gate="G$2" pin="1"/>
+<wire x1="345.44" y1="10.16" x2="337.82" y2="10.16" width="0.1524" layer="91"/>
+<label x="337.82" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM7" class="0">
@@ -11319,11 +11286,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="378.46" y="-10.16" size="1.778" layer="95"/>
 <pinref part="R12" gate="G$4" pin="1"/>
 </segment>
-<segment>
-<pinref part="LVR_DOOR2" gate="G$1" pin="SIG"/>
-<wire x1="596.9" y1="-60.96" x2="607.06" y2="-60.96" width="0.1524" layer="91"/>
-<label x="604.52" y="-60.96" size="1.778" layer="95" font="fixed"/>
-</segment>
 </net>
 <net name="PWM13" class="0">
 <segment>
@@ -11338,8 +11300,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="DOOR2" gate="G$1" pin="SIG"/>
-<wire x1="596.9" y1="-40.64" x2="607.06" y2="-40.64" width="0.1524" layer="91"/>
-<label x="604.52" y="-40.64" size="1.778" layer="95" font="fixed"/>
+<wire x1="596.9" y1="-25.4" x2="607.06" y2="-25.4" width="0.1524" layer="91"/>
+<label x="604.52" y="-25.4" size="1.778" layer="95" font="fixed"/>
 </segment>
 </net>
 <net name="PWM14" class="0">
@@ -11355,8 +11317,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="LVR_DISPENSER" gate="G$1" pin="SIG"/>
-<wire x1="596.9" y1="-81.28" x2="607.06" y2="-81.28" width="0.1524" layer="91"/>
-<label x="604.52" y="-81.28" size="1.778" layer="95" font="fixed"/>
+<wire x1="596.9" y1="-53.34" x2="607.06" y2="-53.34" width="0.1524" layer="91"/>
+<label x="604.52" y="-53.34" size="1.778" layer="95" font="fixed"/>
 </segment>
 </net>
 <net name="PWM15" class="0">
@@ -11716,29 +11678,33 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="601.98" y="20.32" size="1.778" layer="95" font="fixed"/>
 </segment>
 <segment>
-<pinref part="LVR_DOOR1" gate="G$1" pin="V+"/>
+<pinref part="DISPENSER" gate="G$1" pin="V+"/>
 <wire x1="596.9" y1="-2.54" x2="607.06" y2="-2.54" width="0.1524" layer="91"/>
 <label x="601.98" y="-2.54" size="1.778" layer="95" font="fixed"/>
 </segment>
 <segment>
-<pinref part="DISPENSER" gate="G$1" pin="V+"/>
-<wire x1="596.9" y1="-22.86" x2="607.06" y2="-22.86" width="0.1524" layer="91"/>
-<label x="601.98" y="-22.86" size="1.778" layer="95" font="fixed"/>
-</segment>
-<segment>
 <pinref part="DOOR2" gate="G$1" pin="V+"/>
-<wire x1="596.9" y1="-43.18" x2="607.06" y2="-43.18" width="0.1524" layer="91"/>
-<label x="601.98" y="-43.18" size="1.778" layer="95" font="fixed"/>
-</segment>
-<segment>
-<pinref part="LVR_DOOR2" gate="G$1" pin="V+"/>
-<wire x1="596.9" y1="-63.5" x2="607.06" y2="-63.5" width="0.1524" layer="91"/>
-<label x="601.98" y="-63.5" size="1.778" layer="95" font="fixed"/>
+<wire x1="596.9" y1="-27.94" x2="607.06" y2="-27.94" width="0.1524" layer="91"/>
+<label x="601.98" y="-27.94" size="1.778" layer="95" font="fixed"/>
 </segment>
 <segment>
 <pinref part="LVR_DISPENSER" gate="G$1" pin="V+"/>
-<wire x1="596.9" y1="-83.82" x2="607.06" y2="-83.82" width="0.1524" layer="91"/>
-<label x="601.98" y="-83.82" size="1.778" layer="95" font="fixed"/>
+<wire x1="596.9" y1="-55.88" x2="607.06" y2="-55.88" width="0.1524" layer="91"/>
+<label x="601.98" y="-55.88" size="1.778" layer="95" font="fixed"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="VCC"/>
+<wire x1="363.22" y1="116.84" x2="363.22" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="363.22" y1="137.16" x2="337.82" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="337.82" y1="137.16" x2="332.74" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="137.16" x2="332.74" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="337.82" y1="129.54" x2="337.82" y2="137.16" width="0.1524" layer="91"/>
+<junction x="337.82" y="137.16"/>
+<label x="345.44" y="137.16" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
