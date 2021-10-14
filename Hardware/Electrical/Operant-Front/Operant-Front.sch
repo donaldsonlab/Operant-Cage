@@ -4496,13 +4496,11 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </class>
 </classes>
 <parts>
-<part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="+5V" device=""/>
 <part name="5-PIN-HEAD" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="" package3d_urn="urn:adsk.eagle:package:22469/2"/>
 <part name="PI_HEADER" library="SparkFun-Connectors" deviceset="CONN_25" device=""/>
-<part name="POWER" library="SparkFun-Connectors" deviceset="CONN_03" device="" value="455-1750-1-ND"/>
-<part name="SPEAKER" library="SparkFun-Connectors" deviceset="CONN_03" device="" value="455-1750-1-ND"/>
+<part name="POWER" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
 <part name="BACK_BOARD_CONN" library="SparkFun-Connectors" deviceset="CONN_04" device="JST-PTH"/>
 <part name="D1_STATE" library="SparkFun-Connectors" deviceset="CONN_02" device="JST-PTH-2"/>
 <part name="D2_STATE" library="SparkFun-Connectors" deviceset="CONN_02" device="JST-PTH-2"/>
@@ -4512,16 +4510,16 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="IR1" library="SparkFun-Connectors" deviceset="CONN_03" device="JST-PTH"/>
 <part name="IR2" library="SparkFun-Connectors" deviceset="CONN_03" device="JST-PTH"/>
 <part name="READ_PELLET" library="SparkFun-Connectors" deviceset="CONN_03" device="JST-PTH"/>
+<part name="SPEAKER" library="SparkFun-Connectors" deviceset="CONN_03" device="JST-PTH"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<frame x1="170.18" y1="20.32" x2="411.48" y2="200.66" columns="8" rows="5" layer="91"/>
+<frame x1="175.26" y1="22.86" x2="307.34" y2="200.66" columns="8" rows="5" layer="91"/>
+<text x="228.6" y="180.34" size="5.08" layer="91">Operant 
+Standard</text>
 </plain>
 <instances>
-<instance part="GND6" gate="1" x="114.3" y="261.62" smashed="yes">
-<attribute name="VALUE" x="111.76" y="259.08" size="1.778" layer="96"/>
-</instance>
 <instance part="GND7" gate="1" x="187.96" y="30.48" smashed="yes">
 <attribute name="VALUE" x="185.42" y="27.94" size="1.778" layer="96"/>
 </instance>
@@ -4539,10 +4537,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <instance part="POWER" gate="J$1" x="269.24" y="109.22" smashed="yes">
 <attribute name="VALUE" x="266.7" y="101.854" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="266.7" y="114.808" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="SPEAKER" gate="J$1" x="269.24" y="86.36" smashed="yes">
-<attribute name="VALUE" x="266.7" y="78.994" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="266.7" y="91.948" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="BACK_BOARD_CONN" gate="J1" x="271.78" y="63.5" smashed="yes">
 <attribute name="VALUE" x="266.7" y="56.134" size="1.778" layer="96" font="vector"/>
@@ -4579,6 +4573,10 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <instance part="READ_PELLET" gate="J$1" x="215.9" y="73.66" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="218.44" y="66.294" size="1.778" layer="96" font="vector" rot="MR0"/>
 <attribute name="NAME" x="218.44" y="79.248" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="SPEAKER" gate="J$1" x="269.24" y="88.9" smashed="yes">
+<attribute name="VALUE" x="266.7" y="81.534" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="266.7" y="94.488" size="1.778" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -4766,8 +4764,8 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </segment>
 <segment>
 <pinref part="SPEAKER" gate="J$1" pin="3"/>
-<wire x1="276.86" y1="88.9" x2="289.56" y2="88.9" width="0.1524" layer="91"/>
-<label x="284.48" y="88.9" size="1.778" layer="95"/>
+<wire x1="276.86" y1="91.44" x2="289.56" y2="91.44" width="0.1524" layer="91"/>
+<label x="284.48" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TXD" class="0">
@@ -4866,8 +4864,8 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </segment>
 <segment>
 <pinref part="SPEAKER" gate="J$1" pin="1"/>
-<wire x1="276.86" y1="83.82" x2="289.56" y2="83.82" width="0.1524" layer="91"/>
-<label x="281.94" y="83.82" size="1.778" layer="95"/>
+<wire x1="276.86" y1="86.36" x2="289.56" y2="86.36" width="0.1524" layer="91"/>
+<label x="281.94" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO23" class="0">
@@ -4910,14 +4908,14 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <label x="287.02" y="111.76" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SPEAKER" gate="J$1" pin="2"/>
-<wire x1="276.86" y1="86.36" x2="289.56" y2="86.36" width="0.1524" layer="91"/>
-<label x="284.48" y="86.36" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="BACK_BOARD_CONN" gate="J1" pin="1"/>
 <wire x1="276.86" y1="60.96" x2="289.56" y2="60.96" width="0.1524" layer="91"/>
 <label x="284.48" y="60.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SPEAKER" gate="J$1" pin="2"/>
+<wire x1="276.86" y1="88.9" x2="289.56" y2="88.9" width="0.1524" layer="91"/>
+<label x="284.48" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -4926,6 +4924,10 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
