@@ -4512,17 +4512,22 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="READ_PELLET" library="SparkFun-Connectors" deviceset="CONN_03" device="JST-PTH"/>
 <part name="SPEAKER" library="SparkFun-Connectors" deviceset="CONN_03" device="JST-PTH"/>
 <part name="COMM" library="SparkFun-Connectors" deviceset="CONN_02" device="JST-PTH-2"/>
+<part name="SYNC" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="LED1" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="LED2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="R1" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="R2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<frame x1="175.26" y1="22.86" x2="307.34" y2="200.66" columns="8" rows="5" layer="91"/>
 <text x="228.6" y="180.34" size="5.08" layer="91">Operant 
 Bonsai</text>
+<frame x1="180.34" y1="-12.7" x2="302.26" y2="200.66" columns="8" rows="5" layer="91"/>
 </plain>
 <instances>
-<instance part="GND7" gate="1" x="187.96" y="30.48" smashed="yes">
-<attribute name="VALUE" x="185.42" y="27.94" size="1.778" layer="96"/>
+<instance part="GND7" gate="1" x="187.96" y="-2.54" smashed="yes">
+<attribute name="VALUE" x="185.42" y="-5.08" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY7" gate="+5V" x="238.76" y="116.84" smashed="yes">
 <attribute name="VALUE" x="236.855" y="120.015" size="1.778" layer="96"/>
@@ -4582,6 +4587,26 @@ Bonsai</text>
 <instance part="COMM" gate="G$1" x="215.9" y="38.1" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="218.44" y="33.274" size="1.778" layer="96" font="vector" rot="MR0"/>
 <attribute name="NAME" x="218.44" y="43.688" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="SYNC" gate="G$1" x="269.24" y="40.64" smashed="yes">
+<attribute name="VALUE" x="266.7" y="35.814" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="266.7" y="46.228" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="LED1" gate="G$1" x="215.9" y="22.86" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="218.44" y="18.034" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="218.44" y="28.448" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="LED2" gate="G$1" x="215.9" y="10.16" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="218.44" y="5.334" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="218.44" y="15.748" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="R1" gate="G$1" x="238.76" y="22.86" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="241.3" y="18.034" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="241.3" y="28.448" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="R2" gate="G$1" x="238.76" y="10.16" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="241.3" y="5.334" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="241.3" y="15.748" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
 </instances>
 <busses>
@@ -4717,11 +4742,18 @@ Bonsai</text>
 <wire x1="276.86" y1="182.88" x2="289.56" y2="182.88" width="0.1524" layer="91"/>
 <label x="281.94" y="182.88" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="231.14" y1="22.86" x2="223.52" y2="22.86" width="0.1524" layer="91"/>
+<label x="223.52" y="22.86" size="1.778" layer="95"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="187.96" y1="33.02" x2="187.96" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="0" x2="187.96" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="12.7" x2="187.96" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="25.4" x2="187.96" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="40.64" x2="187.96" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="55.88" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="71.12" x2="187.96" y2="88.9" width="0.1524" layer="91"/>
@@ -4760,6 +4792,12 @@ Bonsai</text>
 <pinref part="COMM" gate="G$1" pin="2"/>
 <wire x1="208.28" y1="40.64" x2="187.96" y2="40.64" width="0.1524" layer="91"/>
 <junction x="187.96" y="40.64"/>
+<pinref part="LED1" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="25.4" x2="187.96" y2="25.4" width="0.1524" layer="91"/>
+<junction x="187.96" y="25.4"/>
+<pinref part="LED2" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="12.7" x2="187.96" y2="12.7" width="0.1524" layer="91"/>
+<junction x="187.96" y="12.7"/>
 </segment>
 <segment>
 <pinref part="POWER" gate="J$1" pin="1"/>
@@ -4775,6 +4813,11 @@ Bonsai</text>
 <pinref part="SPEAKER" gate="J$1" pin="3"/>
 <wire x1="276.86" y1="91.44" x2="289.56" y2="91.44" width="0.1524" layer="91"/>
 <label x="284.48" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SYNC" gate="G$1" pin="2"/>
+<wire x1="276.86" y1="43.18" x2="289.56" y2="43.18" width="0.1524" layer="91"/>
+<label x="284.48" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TXD" class="0">
@@ -4869,6 +4912,11 @@ Bonsai</text>
 <wire x1="276.86" y1="185.42" x2="289.56" y2="185.42" width="0.1524" layer="91"/>
 <label x="281.94" y="185.42" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="231.14" y1="10.16" x2="223.52" y2="10.16" width="0.1524" layer="91"/>
+<label x="223.52" y="10.16" size="1.778" layer="95"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+</segment>
 </net>
 <net name="GPIO21" class="0">
 <segment>
@@ -4887,6 +4935,11 @@ Bonsai</text>
 <pinref part="PI_HEADER" gate="G$1" pin="10"/>
 <wire x1="276.86" y1="149.86" x2="289.56" y2="149.86" width="0.1524" layer="91"/>
 <label x="281.94" y="149.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SYNC" gate="G$1" pin="1"/>
+<wire x1="276.86" y1="40.64" x2="289.56" y2="40.64" width="0.1524" layer="91"/>
+<label x="281.94" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO12" class="0">
@@ -4930,6 +4983,30 @@ Bonsai</text>
 <pinref part="SPEAKER" gate="J$1" pin="2"/>
 <wire x1="276.86" y1="88.9" x2="289.56" y2="88.9" width="0.1524" layer="91"/>
 <label x="284.48" y="88.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CONN1" class="0">
+<segment>
+<wire x1="231.14" y1="25.4" x2="223.52" y2="25.4" width="0.1524" layer="91"/>
+<label x="223.52" y="25.4" size="1.778" layer="95"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<wire x1="208.28" y1="22.86" x2="200.66" y2="22.86" width="0.1524" layer="91"/>
+<label x="200.66" y="22.86" size="1.778" layer="95"/>
+<pinref part="LED1" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="CONN2" class="0">
+<segment>
+<wire x1="231.14" y1="12.7" x2="223.52" y2="12.7" width="0.1524" layer="91"/>
+<label x="223.52" y="12.7" size="1.778" layer="95"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<wire x1="208.28" y1="10.16" x2="200.66" y2="10.16" width="0.1524" layer="91"/>
+<label x="200.66" y="10.16" size="1.778" layer="95"/>
+<pinref part="LED2" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>

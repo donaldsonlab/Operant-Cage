@@ -4511,17 +4511,22 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="IR2" library="SparkFun-Connectors" deviceset="CONN_03" device="JST-PTH"/>
 <part name="READ_PELLET" library="SparkFun-Connectors" deviceset="CONN_03" device="JST-PTH"/>
 <part name="SPEAKER" library="SparkFun-Connectors" deviceset="CONN_03" device="JST-PTH"/>
+<part name="SYNC" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="LED1" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="LED2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="R1" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="R2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<frame x1="175.26" y1="22.86" x2="307.34" y2="200.66" columns="8" rows="5" layer="91"/>
 <text x="228.6" y="180.34" size="5.08" layer="91">Operant 
 Standard</text>
+<frame x1="180.34" y1="-5.08" x2="304.8" y2="200.66" columns="8" rows="5" layer="91"/>
 </plain>
 <instances>
-<instance part="GND7" gate="1" x="187.96" y="30.48" smashed="yes">
-<attribute name="VALUE" x="185.42" y="27.94" size="1.778" layer="96"/>
+<instance part="GND7" gate="1" x="187.96" y="5.08" smashed="yes">
+<attribute name="VALUE" x="185.42" y="2.54" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY7" gate="+5V" x="238.76" y="116.84" smashed="yes">
 <attribute name="VALUE" x="236.855" y="120.015" size="1.778" layer="96"/>
@@ -4577,6 +4582,26 @@ Standard</text>
 <instance part="SPEAKER" gate="J$1" x="269.24" y="88.9" smashed="yes">
 <attribute name="VALUE" x="266.7" y="81.534" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="266.7" y="94.488" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="SYNC" gate="G$1" x="269.24" y="48.26" smashed="yes">
+<attribute name="VALUE" x="266.7" y="43.434" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="266.7" y="53.848" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="LED1" gate="G$1" x="215.9" y="30.48" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="218.44" y="25.654" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="218.44" y="36.068" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="LED2" gate="G$1" x="215.9" y="17.78" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="218.44" y="12.954" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="218.44" y="23.368" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="R1" gate="G$1" x="238.76" y="30.48" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="241.3" y="25.654" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="241.3" y="36.068" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="R2" gate="G$1" x="238.76" y="17.78" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="241.3" y="12.954" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="241.3" y="23.368" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
 </instances>
 <busses>
@@ -4712,10 +4737,17 @@ Standard</text>
 <wire x1="276.86" y1="182.88" x2="289.56" y2="182.88" width="0.1524" layer="91"/>
 <label x="281.94" y="182.88" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="231.14" y1="30.48" x2="223.52" y2="30.48" width="0.1524" layer="91"/>
+<label x="223.52" y="30.48" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="187.96" y1="7.62" x2="187.96" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="20.32" x2="187.96" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="33.02" x2="187.96" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="50.8" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="71.12" x2="187.96" y2="88.9" width="0.1524" layer="91"/>
@@ -4751,6 +4783,12 @@ Standard</text>
 <pinref part="READ_PELLET" gate="J$1" pin="1"/>
 <wire x1="208.28" y1="71.12" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
 <junction x="187.96" y="71.12"/>
+<pinref part="LED1" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="33.02" x2="187.96" y2="33.02" width="0.1524" layer="91"/>
+<junction x="187.96" y="33.02"/>
+<pinref part="LED2" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="20.32" x2="187.96" y2="20.32" width="0.1524" layer="91"/>
+<junction x="187.96" y="20.32"/>
 </segment>
 <segment>
 <pinref part="POWER" gate="J$1" pin="1"/>
@@ -4766,6 +4804,11 @@ Standard</text>
 <pinref part="SPEAKER" gate="J$1" pin="3"/>
 <wire x1="276.86" y1="91.44" x2="289.56" y2="91.44" width="0.1524" layer="91"/>
 <label x="284.48" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SYNC" gate="G$1" pin="2"/>
+<wire x1="276.86" y1="50.8" x2="289.56" y2="50.8" width="0.1524" layer="91"/>
+<label x="284.48" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TXD" class="0">
@@ -4855,6 +4898,11 @@ Standard</text>
 <wire x1="276.86" y1="185.42" x2="289.56" y2="185.42" width="0.1524" layer="91"/>
 <label x="281.94" y="185.42" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="231.14" y1="17.78" x2="223.52" y2="17.78" width="0.1524" layer="91"/>
+<label x="223.52" y="17.78" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO21" class="0">
 <segment>
@@ -4873,6 +4921,11 @@ Standard</text>
 <pinref part="PI_HEADER" gate="G$1" pin="10"/>
 <wire x1="276.86" y1="149.86" x2="289.56" y2="149.86" width="0.1524" layer="91"/>
 <label x="281.94" y="149.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SYNC" gate="G$1" pin="1"/>
+<wire x1="276.86" y1="48.26" x2="289.56" y2="48.26" width="0.1524" layer="91"/>
+<label x="281.94" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO12" class="0">
@@ -4916,6 +4969,30 @@ Standard</text>
 <pinref part="SPEAKER" gate="J$1" pin="2"/>
 <wire x1="276.86" y1="88.9" x2="289.56" y2="88.9" width="0.1524" layer="91"/>
 <label x="284.48" y="88.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CONN1" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="231.14" y1="33.02" x2="223.52" y2="33.02" width="0.1524" layer="91"/>
+<label x="223.52" y="33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED1" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="30.48" x2="200.66" y2="30.48" width="0.1524" layer="91"/>
+<label x="200.66" y="30.48" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CONN2" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="231.14" y1="20.32" x2="223.52" y2="20.32" width="0.1524" layer="91"/>
+<label x="223.52" y="20.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED2" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="17.78" x2="200.66" y2="17.78" width="0.1524" layer="91"/>
+<label x="200.66" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
