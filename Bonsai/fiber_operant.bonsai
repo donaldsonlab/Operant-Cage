@@ -9,7 +9,7 @@
     <Nodes>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="ard:AnalogInput">
-          <ard:PortName>COM4</ard:PortName>
+          <ard:PortName>COM8</ard:PortName>
           <ard:Pin>15</ard:Pin>
         </Combinator>
       </Expression>
@@ -17,7 +17,7 @@
         <Combinator xsi:type="rx:Timestamp" />
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>Projects\Operant-Cage\Software\Bonsai-Out\data.csv</io:FileName>
+        <io:FileName>C:\Users\Behavior Scoring\Documents\Projects\Operant-Cage\Software\Bonsai-Out\data.csv</io:FileName>
         <io:Delimiter>,</io:Delimiter>
         <io:Append>false</io:Append>
         <io:Overwrite>false</io:Overwrite>

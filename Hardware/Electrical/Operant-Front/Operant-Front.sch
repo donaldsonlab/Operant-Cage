@@ -4516,22 +4516,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="LED2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="R1" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="R2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
-<part name="LVR_1" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_2" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_3" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_4" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_5" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_6" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_7" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_8" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_9" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_10" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_11" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_12" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_13" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_14" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_15" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
-<part name="LVR_16" library="SparkFun-Connectors" deviceset="CONN_03" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4618,70 +4602,6 @@ Standard</text>
 <instance part="R2" gate="G$1" x="238.76" y="17.78" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="241.3" y="12.954" size="1.778" layer="96" font="vector" rot="MR0"/>
 <attribute name="NAME" x="241.3" y="23.368" size="1.778" layer="95" font="vector" rot="MR0"/>
-</instance>
-<instance part="LVR_1" gate="J$1" x="269.24" y="33.02" smashed="yes">
-<attribute name="VALUE" x="266.7" y="25.654" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="266.7" y="38.608" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_2" gate="J$1" x="269.24" y="17.78" smashed="yes">
-<attribute name="VALUE" x="266.7" y="10.414" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="266.7" y="23.368" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_3" gate="J$1" x="287.02" y="33.02" smashed="yes">
-<attribute name="VALUE" x="284.48" y="25.654" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="284.48" y="38.608" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_4" gate="J$1" x="287.02" y="17.78" smashed="yes">
-<attribute name="VALUE" x="284.48" y="10.414" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="284.48" y="23.368" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_5" gate="J$1" x="322.58" y="33.02" smashed="yes">
-<attribute name="VALUE" x="320.04" y="25.654" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="320.04" y="38.608" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_6" gate="J$1" x="322.58" y="17.78" smashed="yes">
-<attribute name="VALUE" x="320.04" y="10.414" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="320.04" y="23.368" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_7" gate="J$1" x="340.36" y="33.02" smashed="yes">
-<attribute name="VALUE" x="337.82" y="25.654" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="337.82" y="38.608" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_8" gate="J$1" x="340.36" y="17.78" smashed="yes">
-<attribute name="VALUE" x="337.82" y="10.414" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="337.82" y="23.368" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_9" gate="J$1" x="375.92" y="33.02" smashed="yes">
-<attribute name="VALUE" x="373.38" y="25.654" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="373.38" y="38.608" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_10" gate="J$1" x="375.92" y="17.78" smashed="yes">
-<attribute name="VALUE" x="373.38" y="10.414" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="373.38" y="23.368" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_11" gate="J$1" x="393.7" y="33.02" smashed="yes">
-<attribute name="VALUE" x="391.16" y="25.654" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="391.16" y="38.608" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_12" gate="J$1" x="393.7" y="17.78" smashed="yes">
-<attribute name="VALUE" x="391.16" y="10.414" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="391.16" y="23.368" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_13" gate="J$1" x="325.12" y="71.12" smashed="yes">
-<attribute name="VALUE" x="322.58" y="63.754" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="322.58" y="76.708" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_14" gate="J$1" x="325.12" y="55.88" smashed="yes">
-<attribute name="VALUE" x="322.58" y="48.514" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="322.58" y="61.468" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_15" gate="J$1" x="340.36" y="71.12" smashed="yes">
-<attribute name="VALUE" x="337.82" y="63.754" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="337.82" y="76.708" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="LVR_16" gate="J$1" x="340.36" y="55.88" smashed="yes">
-<attribute name="VALUE" x="337.82" y="48.514" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="337.82" y="61.468" size="1.778" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
