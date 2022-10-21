@@ -1,3 +1,6 @@
 [submodule "RPI_operant"]
 	path = RPI_operant
 	url = https://github.com/dprotter/RPI_operant.git
+[submodule "RPI_Operant2"]
+	path = RPI_Operant2
+	url = https://github.com/dprotter/RPI_Operant2.git
