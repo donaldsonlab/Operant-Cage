@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2023-01-13T19:26:35Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.7.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Operant-Front-Bonsai"
+        },
+        "Owner": "Ryan Cameron <ryca1116@colorado.edu>",
+        "Size": {
+            "X": 67.925,
+            "Y": 49.2
+        }
+    }
+}
