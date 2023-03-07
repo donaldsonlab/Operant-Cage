@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2023-02-13T18:05:28Z",
+        "GenerationSoftware": {
+            "Application": "Fusion 360 Electronics",
+            "Vendor": "Autodesk",
+            "Version": "9.7.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Operant_Front_Bonsai_Large v8"
+        },
+        "Owner": "Ryan Cameron <ryca1116@colorado.edu>",
+        "Size": {
+            "X": 67.925,
+            "Y": 49.2
+        }
+    }
+}
